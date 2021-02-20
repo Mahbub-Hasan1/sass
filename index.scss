@@ -1,0 +1,39 @@
+@import './variables';
+
+$backgroundColor: green;
+$color: #fff;
+
+
+@mixin textCenter($direction: row){
+  text-align: center;
+  flex-direction: $direction;
+}
+
+.sectionBox{
+  @include textCenter();
+  background-color: $backgroundColor;
+}
+
+
+header {
+  @include textCenter();
+  background-color: $backgroundColor;
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 50px;
+  }
+
+}
+
+.contact {
+  @include textCenter(column);
+  background-color: $backgroundColor;
+  p {
+    background-color: orange;
+    padding: 5px;
+    font-weight: 500;
+    color: $color;
+  }
+}
